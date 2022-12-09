@@ -7,17 +7,17 @@ class GetServiceProvidersInfoMiddleware{
     
     public validateRequest(request: Request, response: Response, next: NextFunction) {
         const input: GetServiceProviderInfoModel = {
-            userId: request.body.userId
+            customerId: request.params.customerId
         };
     
         try {
           new GetServiceProvidersInfoValidator(input)
-            .validateClientId()
+            .validateCustomerId()
     
         } catch  (err) {
           console.log(err);
           response.status(HttpStatus.BAD_REQUEST);
-          response.json(err);
+          response.send(err);
           return;
         }
 

@@ -1,5 +1,5 @@
 import { Tables } from "../constants/Tables";
-import CommunityServiceProviders from "../CommunityServiceProviders/configuration/definition";
+import CommunityServiceProviders from "../entites/CommunityServiceProviders/configuration/definition";
 import { createTable } from "./CreateTable";
 
 export class TableInitializer {

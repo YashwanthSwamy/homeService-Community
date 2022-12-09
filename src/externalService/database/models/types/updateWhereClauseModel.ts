@@ -1,0 +1,3 @@
+interface UpdateWhereClauseModel {
+    CustomerID: string;
+}

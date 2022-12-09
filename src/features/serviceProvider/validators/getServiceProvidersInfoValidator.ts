@@ -8,9 +8,9 @@ export class GetServiceProvidersInfoValidator {
         this.input = request;
     }
 
-    validateClientId() {
-        if (!commonValidators.checkIsValidASCII(this.input.userId)) {
-          throw new Error("[VALIDATION] userId undefined/ not ASCII");
+    validateCustomerId() {
+        if (!commonValidators.checkIsValidASCII(this.input.customerId)) {
+          throw new Error("[VALIDATION] customer Id undefined/ not ASCII");
         }
     
         return this;

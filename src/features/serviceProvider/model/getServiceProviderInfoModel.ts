@@ -1,3 +1,3 @@
 export interface GetServiceProviderInfoModel {
-    userId: string;
+    customerId: string;
 }

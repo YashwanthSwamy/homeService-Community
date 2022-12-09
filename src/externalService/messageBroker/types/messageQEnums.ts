@@ -1,5 +1,6 @@
 export const MessageQEvent = {
-    UserCreated : "event.user.created" 
+    CustomerCreated : "event.customer.created",
+    CustomerUpdated : "event.customer.updated" 
 };
 
 export enum MessageQQueues {

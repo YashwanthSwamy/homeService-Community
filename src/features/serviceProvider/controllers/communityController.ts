@@ -1,18 +1,13 @@
 import { Request, Response } from "express";
-import HttpStatus from "http-status-codes";
+import { getServiceProviderInfoService } from "../service/getServiceProviderInfoService";
 
-class CommunityController{
+class CommunityController {
 
-    getServiceProviderInfo(req: Request, res: Response){
-        console.log("[Controller] Get Service Provider", {input: req.body})
-        try {
-            const result = { status : 200,  data : ""}
-            res.status(HttpStatus.OK);
-            res.send(result.data);
-        } catch (status) {
-            res.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
-            res.send(undefined);
-        }
+    async getServiceProviderInfo(req: Request, res: Response) {
+        console.log("[Controller] Get Service Provider", { input: { customerId: req.params.customerId } });
+        const result = await getServiceProviderInfoService.get(req.params.customerId);
+        res.status(result.status);
+        res.send(result.data);
     }
 }
 
