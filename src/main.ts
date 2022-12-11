@@ -4,6 +4,7 @@ import { environmentVariables } from "./configuration/environmentVariables";
 import { TableInitializer } from "./externalService/database/tables/intialization";
 import messageQ from "./externalService/messageBroker/messageQ";
 import { communityRoutes } from "./routes/communityRoutes";
+import cors from 'cors';
 
 const port = environmentVariables.PORT;
 const app = express();
@@ -16,6 +17,7 @@ function checkErrors(err: any, req: any, res: any, next: any) {
   }
 }
 
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(checkErrors);
 app.use(communityRoutes);

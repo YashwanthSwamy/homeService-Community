@@ -11,5 +11,4 @@ export default class CommunityServiceProviders {
     table.string("UserType").nullable();
     table.string("OfferedService").nullable();
   }
-
 }

@@ -3,7 +3,7 @@ import { Operation } from "../../../externalService/database/enums/dbOperations"
 import { getStatusCode } from "../../shared/service/getStatusCode";
 
 class GetServiceProviderInfoService {
-    async get(customerId: string) {
+    async get(customerId?: string) {
         try {
             const result = await getServiceProviderInfoQuery.execute(customerId);
             return {
