@@ -1,12 +1,12 @@
-version: "1"
+version: "3"
 services:
   CommunityService:
     container_name: CommunityService
-    image: communityService:local-test
+    image: community_service:local-test
     build: .
     ports:
-      - "15001:15001"
+      - "8085:8085"
     environment:
-      PORT: 15001
+      PORT: 8085
       MESSAGEQ_URL: amqp://guest:guest@0.0.0.0:5672
       SQL_DB_URI: postgres://postgres:postgres@0.0.0.0:32768/postgres
