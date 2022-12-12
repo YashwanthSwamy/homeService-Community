@@ -1,5 +1,5 @@
 import { MessageQEvent } from "../types/messageQEnums";
-import { ActionEvents } from "../Types/ActionEvents";
+import { ActionEvents } from "../types/actionEvents";
 import { IEventHandlerResponse } from "../models/eventHandlerResponse";
 import { MessagePropertyHeaders } from "amqplib/properties";
 import { customerEventHandler } from "./customerEventHandler";

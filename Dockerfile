@@ -1,14 +1,11 @@
-FROM node:14-alpine as base
+FROM node:16 as build_image
 
-RUN mkdir -p /usr/src/app
-
-WORKDIR /usr/src/app
-
-COPY package.json /usr/src/app/
+COPY package*.json ./
 RUN npm install
 
-COPY . /usr/src/app
+COPY . .
 
-EXPOSE 8085
+EXPOSE 8080
 
-CMD ["npm", "run", "serve"]
+
+CMD [ "npm", "run", "serve"]

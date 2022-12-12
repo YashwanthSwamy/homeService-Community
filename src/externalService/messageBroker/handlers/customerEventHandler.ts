@@ -1,7 +1,7 @@
 import { MessagePropertyHeaders } from "amqplib/properties";
 import { IEventHandlerResponse } from "../models/eventHandlerResponse";
 import { customerService } from "../service/customerService";
-import { ActionEvents } from "../Types/ActionEvents";
+import { ActionEvents } from "../types/actionEvents";
 import { MessageQEvent } from "../types/messageQEnums";
 
 export class CustomerEventHandler {

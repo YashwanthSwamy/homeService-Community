@@ -5,7 +5,7 @@ import channelInitializer from "./configuration/channelInitialiser";
 import { MessageQConnector } from "./Connector/MessageConnector";
 import eventHandler from "./handlers/eventHandler";
 import { IEventHandlerResponse } from "./models/eventHandlerResponse";
-import { ActionEvents } from "./Types/ActionEvents";
+import { ActionEvents } from "./types/actionEvents";
 import { MessageQChannelVariables, MessageQQueues } from "./types/messageQEnums";
 
 class MessageQ extends MessageQConnector {
